@@ -1,0 +1,127 @@
+Name         : kf5-kdelibs4support
+Version      : 4.99.0
+Release      : 1
+Group        : System/Base
+License      : GPLv2+
+Summary      : KDE Frameworks 5 Tier 4 module with porting aid from KDELibs 4
+Description  : |
+  KDE Frameworks 5 Tier 4 module with porting aid from KDELibs 4
+URL          : http://www.kde.org
+SetupOptions : -q -n %{name}-%{version}/upstream
+
+Sources:
+    - "%{name}-%{version}.tar.xz"
+
+RpmLintIgnore:
+    - devel-file-in-non-devel-package
+    - no-changelogname-tag
+    - library-without-ldconfig-postin
+    - library-without-ldconfig-postun
+
+Configure    : none
+Builder      : none
+
+PkgBR:
+    - kf5-rpm-macros
+    - extra-cmake-modules
+    - qt5-tools
+    - libX11-devel
+    - libSM-devel
+    - openssl-devel
+    - gettext-devel
+    - kf5-kcompletion-devel
+    - kf5-kconfig-devel
+    - kf5-kconfigwidgets-devel
+    - kf5-kcrash-devel
+    - kf5-kdesignerplugin-devel
+    - kf5-kglobalaccel-devel
+    - kf5-kdoctools-devel
+    - kf5-kguiaddons-devel
+    - kf5-ki18n-devel
+    - kf5-kiconthemes-devel
+    - kf5-kio-devel
+    - kf5-knotifications-devel
+    - kf5-kparts-devel
+    - kf5-kservice-devel
+    - kf5-ktextwidgets-devel
+    - kf5-kunitconversion-devel
+    - kf5-kwidgetsaddons-devel
+    - kf5-kwindowsystem-devel
+    - kf5-kxmlgui-devel
+PkgConfigBR:
+    - Qt5Core
+    - Qt5DBus
+    - Qt5Xml
+    - Qt5Network
+    - Qt5Gui
+    - Qt5Widgets
+    - Qt5Concurrent
+    - Qt5Test
+    - Qt5X11Extras
+    - Qt5Svg
+Requires:
+    - kf5-filesystem
+
+RequiresPost:
+    - /sbin/ldconfig
+RequiresPostUn:
+    - /sbin/ldconfig
+
+Files:
+    - "%doc COPYING.LIB README.md"
+    - "%{_kf5_bindir}/kf5-config"
+    - "%{_kf5_bindir}/kdebugdialog5"
+    - "%{_kf5_libdir}/libKF5KDELibs4Support.so.*"
+    - "%{_kf5_libexecdir}/fileshareset"
+    - "%{_kf5_qtplugindir}/kf5/*.so"
+    - "%{_kf5_qtplugindir}/designer/*.so"
+    - "%{_kf5_mandir}/man1/*"
+    - "%{_kf5_datadir}/kservices5/*.protocol"
+    - "%{_kf5_datadir}/kservices5/*.desktop"
+    - "%{_kf5_datadir}/kservices5/qimageioplugins/*.desktop"
+    - "%{_kf5_datadir}/kservicetypes5/*.desktop"
+    - "%{_kf5_datadir}/kservices5/kded/networkstatus.desktop"
+    - "%{_kf5_datadir}/kf5/kdoctools/customization"
+    - "%{_kf5_datadir}/kf5/locale/*"
+    - "%{_kf5_datadir}/locale/en_US/kf5_entry.desktop"
+    - "%{_kf5_datadir}/locale/kf5_all_languages"
+    - "%{_kf5_datadir}/kf5/widgets/"
+    - "%{_kf5_datadir}/kf5/kssl/ca-bundle.crt"
+    - "%{_kf5_sysconfdir}/xdg/colors"
+    - "%{_kf5_sysconfdir}/xdg/kdebug.areas"
+    - "%{_kf5_sysconfdir}/xdg/kdebugrc"
+    - "%{_kf5_sysconfdir}/xdg/ksslcalist"
+    - "%{_kf5_docdir}/HTML/en/kdebugdialog5"
+
+SubPackages:
+    - Name: devel
+      Group: Development/Libraries
+      Summary: Development files for %{name}
+      Description: |
+        The %{name}-devel package contains the files necessary to develop applications
+        that use %{name}.
+      Requires:
+        - kf5-kauth-devel
+        - kf5-kconfigwidgets-devel
+        - kf5-kcoreaddons-devel
+        - kf5-kcrash-devel
+        - kf5-kdesignerplugin-devel
+        - kf5-kdoctools-devel
+        - kf5-kemoticons-devel
+        - kf5-kguiaddons-devel
+        - kf5-kiconthemes-devel
+        - kf5-kitemmodels-devel
+        - kf5-kinit-devel
+        - kf5-knotifications-devel
+        - kf5-kparts-devel
+        - kf5-ktextwidgets-devel
+        - kf5-kunitconversion-devel
+        - kf5-kwindowsystem-devel
+      Files:
+        - "%{_kf5_libdir}/libKF5KDELibs4Support.so"
+        - "%{_kf5_libdir}/cmake/KF5KDELibs4Support/"
+        - "%{_kf5_libdir}/cmake/KF5KDE4Support/"
+        - "%{_kf5_libdir}/cmake/KDELibs4/"
+        - "%{_kf5_includedir}/kdelibs4support_version.h"
+        - "%{_kf5_includedir}/KDELibs4Support/"
+        - "%{_kf5_datadir}/dbus-1/interfaces/*.xml"
