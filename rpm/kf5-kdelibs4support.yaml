@@ -48,6 +48,8 @@ PkgBR:
     - kf5-kwidgetsaddons-devel
     - kf5-kwindowsystem-devel
     - kf5-kxmlgui-devel
+    - qt5-qttools-qtdesigner-devel
+    - qt5-qttools-qtdesigner
 PkgConfigBR:
     - Qt5Core
     - Qt5DBus

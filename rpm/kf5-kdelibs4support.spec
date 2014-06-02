@@ -55,6 +55,8 @@ BuildRequires:  kf5-kunitconversion-devel
 BuildRequires:  kf5-kwidgetsaddons-devel
 BuildRequires:  kf5-kwindowsystem-devel
 BuildRequires:  kf5-kxmlgui-devel
+BuildRequires:  qt5-qttools-qtdesigner-devel
+BuildRequires:  qt5-qttools-qtdesigner
 
 
 %description
