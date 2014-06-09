@@ -25,10 +25,6 @@ PkgBR:
     - kf5-rpm-macros
     - extra-cmake-modules
     - qt5-tools
-    - libX11-devel
-    - libSM-devel
-    - openssl-devel
-    - gettext-devel
     - kf5-kcompletion-devel
     - kf5-kconfig-devel
     - kf5-kconfigwidgets-devel
@@ -48,8 +44,6 @@ PkgBR:
     - kf5-kwidgetsaddons-devel
     - kf5-kwindowsystem-devel
     - kf5-kxmlgui-devel
-    - qt5-qttools-qtdesigner-devel
-    - qt5-qttools-qtdesigner
 PkgConfigBR:
     - Qt5Core
     - Qt5DBus
@@ -62,6 +56,11 @@ PkgConfigBR:
     - Qt5X11Extras
     - Qt5Svg
     - Qt5PrintSupport
+    - Qt5Designer
+    - Qt5DesignerComponents
+    - x11-xcb
+    - sm
+    - openssl
 Requires:
     - kf5-filesystem
 
