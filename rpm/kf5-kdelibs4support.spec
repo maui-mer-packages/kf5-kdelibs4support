@@ -39,6 +39,7 @@ BuildRequires:  pkgconfig(openssl)
 BuildRequires:  kf5-rpm-macros
 BuildRequires:  extra-cmake-modules
 BuildRequires:  qt5-tools
+BuildRequires:  qt5-qttools-qtdesigner
 BuildRequires:  kf5-kcompletion-devel
 BuildRequires:  kf5-kconfig-devel
 BuildRequires:  kf5-kconfigwidgets-devel
