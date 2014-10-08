@@ -8,12 +8,6 @@ Name:       kdelibs4support
 # >> macros
 # << macros
 
-# >> bcond_with
-# << bcond_with
-
-# >> bcond_without
-# << bcond_without
-
 Summary:    KDE Frameworks 5 Tier 4 module with porting aid from KDELibs 4
 Version:    5.2.0
 Release:    1
@@ -97,7 +91,7 @@ that use %{name}.
 
 
 %prep
-%setup -q -n %{name}-%{version}/upstream
+%setup -q -n %{name}-%{version}
 
 # >> setup
 # << setup
