@@ -69,6 +69,9 @@ RequiresPost:
 RequiresPostUn:
     - /sbin/ldconfig
 
+LocaleName: kdelibs4support5_qt
+LocaleOptions: "--with-qt --all-name || :"
+
 Files:
     - "%doc COPYING.LIB README.md"
     - "%{_kf5_bindir}/kf5-config"
