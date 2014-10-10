@@ -10,7 +10,7 @@ Name:       kdelibs4support
 
 Summary:    KDE Frameworks 5 Tier 4 module with porting aid from KDELibs 4
 Version:    5.3.0
-Release:    1
+Release:    2
 Group:      System/Base
 License:    GPLv2+
 URL:        http://www.kde.org
