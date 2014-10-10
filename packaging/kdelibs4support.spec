@@ -131,7 +131,6 @@ rm -rf %{buildroot}
 %{_kf5_servicesdir}/kded/networkstatus.desktop
 %{_kf5_datadir}/kdoctools/customization
 %{_kf5_datadir}/locale/*
-%{_kf5_sharedir}/locale/en_US/kf5_entry.desktop
 %{_kf5_sharedir}/locale/kf5_all_languages
 %{_kf5_datadir}/widgets/
 %{_kf5_datadir}/kssl/ca-bundle.crt
